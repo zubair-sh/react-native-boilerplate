@@ -35,6 +35,13 @@ export const APP_ENV =
 
 export const IS_DEV = APP_ENV === 'development';
 
+/**
+ * When true, all queryFn endpoints return hardcoded mock data.
+ * Controlled by EXPO_PUBLIC_USE_MOCK in your .env file.
+ * Set to 'false' once your backend is ready.
+ */
+export const IS_MOCK = process.env.EXPO_PUBLIC_USE_MOCK === 'true';
+
 // ─── Base query factory ───────────────────────────────────────────────────────
 
 /**

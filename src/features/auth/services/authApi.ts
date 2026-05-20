@@ -2,13 +2,18 @@
  * Auth RTK Query API — src/features/auth/services/authApi.ts
  *
  * Cookie-based auth: the server sets access + refresh tokens as HttpOnly cookies.
- * No token storage needed — the native HTTP layer manages cookies automatically.
+ *
+ * Mock mode: set EXPO_PUBLIC_USE_MOCK=true in .env — the entire baseQuery is
+ * swapped to createMockBaseQuery(AUTH_MOCK_HANDLERS). Endpoints stay unchanged.
  */
 import { createApi } from '@reduxjs/toolkit/query/react';
 
+import { IS_MOCK } from '@shared/services/api';
 import { authBaseQuery } from '@shared/services/baseQuery';
+import { createMockBaseQuery } from '@shared/services/mockBaseQuery';
 
 import { AUTH_ENDPOINTS } from '../constants/endpoints';
+import { AUTH_MOCK_HANDLERS } from '../mocks/auth.mocks';
 import { setCredentials } from '../store/authSlice';
 import type { AuthResponse, LoginRequest, RegisterRequest, User } from '../types/auth.types';
 
@@ -16,7 +21,7 @@ import type { AuthResponse, LoginRequest, RegisterRequest, User } from '../types
 
 export const authApi = createApi({
   reducerPath: 'authApi',
-  baseQuery: authBaseQuery,
+  baseQuery: IS_MOCK ? createMockBaseQuery(AUTH_MOCK_HANDLERS) : authBaseQuery,
   endpoints: (builder) => ({
     login: builder.mutation<AuthResponse, LoginRequest>({
       query: (credentials) => ({
@@ -27,7 +32,6 @@ export const authApi = createApi({
       onQueryStarted: async (_, { dispatch, queryFulfilled }) => {
         try {
           const { data } = await queryFulfilled;
-          // Server sets tokens as HttpOnly cookies — just store the user in Redux
           dispatch(setCredentials({ user: data.user }));
         } catch {
           // Errors surface via isError in the component
@@ -56,7 +60,6 @@ export const authApi = createApi({
       onQueryStarted: async (_, { dispatch, queryFulfilled }) => {
         try {
           const { data } = await queryFulfilled;
-          // Keep Redux user state fresh from the server
           dispatch(setCredentials({ user: data }));
         } catch {
           // 401 handled by authBaseQuery (auto-refresh + logout)
