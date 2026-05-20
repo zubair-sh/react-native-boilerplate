@@ -1,0 +1,20 @@
+{
+  "title": "Home",
+  "greeting": "Hello, {{name}}!",
+  "welcomeBack": "Welcome back",
+  "recentActivity": "Recent Activity",
+  "noActivity": "No recent activity to show.",
+  "quickActions": {
+    "title": "Quick Actions",
+    "viewAll": "View All"
+  },
+  "sections": {
+    "featured": "Featured",
+    "latest": "Latest",
+    "recommended": "Recommended for You"
+  },
+  "empty": {
+    "title": "Nothing here yet",
+    "subtitle": "Check back later for updates."
+  }
+}

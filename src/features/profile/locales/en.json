@@ -1,0 +1,38 @@
+{
+  "title": "Profile",
+  "editProfile": "Edit Profile",
+  "personalInfo": {
+    "title": "Personal Information",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "phone": "Phone Number",
+    "dateOfBirth": "Date of Birth"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "theme": "Appearance",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "themeSystem": "System Default",
+    "notifications": "Notifications",
+    "privacy": "Privacy & Security"
+  },
+  "account": {
+    "title": "Account",
+    "changePassword": "Change Password",
+    "deleteAccount": "Delete Account",
+    "deleteConfirmTitle": "Delete Account?",
+    "deleteConfirmMessage": "This action cannot be undone. All your data will be permanently deleted."
+  },
+  "logout": {
+    "button": "Sign Out",
+    "confirmTitle": "Sign Out?",
+    "confirmMessage": "Are you sure you want to sign out?"
+  },
+  "avatar": {
+    "change": "Change Photo",
+    "remove": "Remove Photo"
+  }
+}

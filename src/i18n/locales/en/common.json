@@ -1,0 +1,24 @@
+{
+  "error": "Something went wrong. Please try again.",
+  "loading": "Loading...",
+  "retry": "Retry",
+  "cancel": "Cancel",
+  "confirm": "Confirm",
+  "save": "Save",
+  "delete": "Delete",
+  "back": "Back",
+  "next": "Next",
+  "done": "Done",
+  "yes": "Yes",
+  "no": "No",
+  "ok": "OK",
+  "networkError": "No internet connection. Please check your network.",
+  "unknownError": "An unexpected error occurred.",
+  "validation": {
+    "required": "This field is required.",
+    "invalidEmail": "Please enter a valid email address.",
+    "minLength": "Must be at least {{count}} characters.",
+    "maxLength": "Must be at most {{count}} characters.",
+    "passwordMismatch": "Passwords do not match."
+  }
+}

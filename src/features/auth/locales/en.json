@@ -1,0 +1,43 @@
+{
+  "login": {
+    "title": "Welcome Back",
+    "subtitle": "Sign in to your account",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "you@example.com",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "submitButton": "Sign In",
+    "forgotPassword": "Forgot password?",
+    "noAccount": "Don't have an account?",
+    "signUpLink": "Sign Up"
+  },
+  "register": {
+    "title": "Create Account",
+    "subtitle": "Join us today",
+    "firstNameLabel": "First Name",
+    "lastNameLabel": "Last Name",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "you@example.com",
+    "passwordLabel": "Password",
+    "confirmPasswordLabel": "Confirm Password",
+    "submitButton": "Create Account",
+    "hasAccount": "Already have an account?",
+    "signInLink": "Sign In"
+  },
+  "forgotPassword": {
+    "title": "Reset Password",
+    "subtitle": "Enter your email to receive a reset link",
+    "emailLabel": "Email Address",
+    "submitButton": "Send Reset Link",
+    "backToLogin": "Back to Sign In",
+    "successMessage": "Reset link sent! Check your inbox."
+  },
+  "errors": {
+    "invalidCredentials": "Invalid email or password.",
+    "emailAlreadyInUse": "This email is already registered.",
+    "weakPassword": "Password must be at least 8 characters.",
+    "tokenExpired": "Your session has expired. Please sign in again.",
+    "unauthorized": "You are not authorized to perform this action."
+  },
+  "logout": "Sign Out"
+}
